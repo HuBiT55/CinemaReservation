@@ -15,6 +15,8 @@ public class CinemaReservationSystem {
     private JButton reserveButton;
     private MovieList movieList;
     private List<CinemaHall> hallList;
+    private int selectedRow;
+    private int selectedSeat;
 
     public CinemaReservationSystem() {
         movieList = new MovieList();
@@ -23,9 +25,9 @@ public class CinemaReservationSystem {
     }
 
     private void addCinemaHalls() {
-        CinemaHall hall1 = new CinemaHall("Sala 1", 10);
-        CinemaHall hall2 = new CinemaHall("Sala 2", 80);
-        CinemaHall hall3 = new CinemaHall("Sala 3", 120);
+        CinemaHall hall1 = new CinemaHall("Sala 1", 100,10,10);
+        CinemaHall hall2 = new CinemaHall("Sala 2", 96,8,12);
+        CinemaHall hall3 = new CinemaHall("Sala 3", 180,12,15);
 
         hallList.add(hall1);
         hallList.add(hall2);
@@ -95,7 +97,7 @@ public class CinemaReservationSystem {
             return;
         }
 
-        Reservation reservation = new Reservation(selectedMovie, selectedHall, date);
+        Reservation reservation = new Reservation(selectedMovie, selectedHall, date, selectedRow, selectedSeat);
 
         String message = "Zarezerwowano film: " + selectedMovie.getTitle() + "\n"
                 + "Sala kinowa: " + selectedHall.getName() + "\n"

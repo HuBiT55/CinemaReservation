@@ -3,20 +3,12 @@ public class Reservation {
     private CinemaHall cinemaHall;
     private String date;
     private int row;
-    private int col;
+    private int seat;
 
-    public Reservation(Movie movie, CinemaHall cinemaHall, String date) {
+    public Reservation(Movie movie, CinemaHall cinemaHall, String date, int selectedRow, int selectedSeat) {
         this.movie = movie;
         this.cinemaHall = cinemaHall;
         this.date = date;
-    }
-
-    public Reservation(Movie movie, CinemaHall cinemaHall, String date, int row, int col) {
-        this.movie = movie;
-        this.cinemaHall = cinemaHall;
-        this.date = date;
-        this.row = row;
-        this.col = col;
     }
 
     public Movie getMovie() {
@@ -35,7 +27,15 @@ public class Reservation {
         return row;
     }
 
-    public int getCol() {
-        return col;
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getSeat() {
+        return seat;
+    }
+
+    public void setSeat(int seat) {
+        this.seat = seat;
     }
 }

@@ -2,14 +2,13 @@ public class CinemaHall {
     private String name;
     private int capacity;
     private int rows;
+    private int seatsPerRow;
 
-    public CinemaHall(String name, int capacity) {
+    public CinemaHall(String name, int capacity, int rows, int seatsPerRow) {
         this.name = name;
         this.capacity = capacity;
         this.rows = rows;
-    }
-
-    public CinemaHall(String name, int capacity, int i) {
+        this.seatsPerRow = seatsPerRow;
     }
 
     public String getName() {
@@ -22,6 +21,10 @@ public class CinemaHall {
 
     public int getRows() {
         return rows;
+    }
+
+    public int getSeatsPerRow() {
+        return seatsPerRow;
     }
 
     @Override

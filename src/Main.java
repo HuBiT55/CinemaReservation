@@ -11,9 +11,9 @@ public class Main {
         system.addMovie(movie3);
 
         // Dodaj sale kinowe do systemu
-        CinemaHall hall1 = new CinemaHall("Sala A", 10);
-        CinemaHall hall2 = new CinemaHall("Sala B", 8);
-        CinemaHall hall3 = new CinemaHall("Sala C", 6);
+        CinemaHall hall1 = new CinemaHall("Sala 1", 100,10,10);
+        CinemaHall hall2 = new CinemaHall("Sala 2", 96,8,12);
+        CinemaHall hall3 = new CinemaHall("Sala 3", 180,12,15);
         system.addCinemaHall(hall1);
         system.addCinemaHall(hall2);
         system.addCinemaHall(hall3);
